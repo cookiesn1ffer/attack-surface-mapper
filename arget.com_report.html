@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attack Surface Report — arget.com</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #00d4ff;
+      --green: #00e676;
+      --yellow: #ffd740;
+      --red: #ff5252;
+      --text: #e0e0e0;
+      --dim: #888;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; padding: 2rem; }
+    h1 { color: var(--accent); font-size: 1.8rem; margin-bottom: .25rem; }
+    .meta { color: var(--dim); font-size: .85rem; margin-bottom: 2rem; }
+    h2 { color: var(--accent); font-size: 1.2rem; margin: 2rem 0 1rem; border-bottom: 1px solid var(--border); padding-bottom: .5rem; }
+    h3 { color: var(--text); font-size: 1rem; margin-bottom: .5rem; }
+    .ip { color: var(--dim); font-size: .85rem; font-weight: normal; }
+    table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
+    th { background: #22253a; color: var(--accent); font-weight: 600; padding: .6rem 1rem; text-align: left; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+    td { padding: .55rem 1rem; border-bottom: 1px solid var(--border); font-size: .875rem; vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #20233a; }
+    .subdomain { font-family: monospace; color: var(--text); }
+    .status-ok { color: var(--green); font-weight: 600; }
+    .status-err { color: var(--red); font-weight: 600; }
+    .tls-ok { color: var(--green); }
+    .tls-warn { color: var(--yellow); }
+    .tls-bad { color: var(--red); }
+    .badge { background: #2a3a2a; color: var(--green); border-radius: 4px; padding: 1px 6px; font-size: .75rem; display: inline-block; margin: 1px; }
+    .port { background: #2a2a3a; color: var(--yellow); border-radius: 4px; padding: 1px 6px; font-family: monospace; }
+    .none { color: var(--dim); font-style: italic; }
+    .error { color: var(--red); }
+    .host-section { margin-bottom: 1.5rem; }
+    .port-table { max-width: 700px; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; }
+    .stat-num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: .8rem; color: var(--dim); margin-top: .25rem; }
+  </style>
+</head>
+<body>
+  <h1>⚡ Attack Surface Report</h1>
+  <p class='meta'>Target: <strong>arget.com</strong> · Generated: 2026-06-14 04:45:17</p>
+
+  <div class='summary-grid'>
+    <div class='stat'><div class='stat-num'>1</div><div class='stat-label'>Subdomains</div></div>
+    <div class='stat'><div class='stat-num'>0</div><div class='stat-label'>via crt.sh</div></div>
+    <div class='stat'><div class='stat-num'>1</div><div class='stat-label'>via Brute Force</div></div>
+    <div class='stat'><div class='stat-num'>0</div><div class='stat-label'>Open Ports</div></div>
+  </div>
+
+  <h2>Subdomain Overview</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Subdomain</th>
+        <th>HTTP Status</th>
+        <th>Server</th>
+        <th>Technologies</th>
+        <th>TLS Expiry</th>
+        <th>Ports</th>
+      </tr>
+    </thead>
+    <tbody><tr><td class='subdomain'>www.arget.com</td><td><span class='status-ok'>200</span></td><td></td><td><span class='badge'>Next.js</span></td><td><span class='tls-warn'>0d</span></td><td>error</td></tr></tbody>
+  </table>
+
+  <h2>Open Ports Detail</h2>
+  
+        <div class='host-section'>
+          <h3>www.arget.com <span class='ip'>()</span></h3>
+          <table class='port-table'>
+            <thead><tr><th>Port</th><th>Proto</th><th>Service</th><th>Details</th></tr></thead>
+            <tbody><tr><td colspan='4' class='error'>Error: nmap not found — install it: https://nmap.org/download.html</td></tr></tbody>
+          </table>
+        </div>
+        
+</body>
+</html>
