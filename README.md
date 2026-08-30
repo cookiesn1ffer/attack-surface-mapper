@@ -28,7 +28,7 @@ A subdomain enumeration and attack surface mapping tool with a desktop GUI. Disc
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/attack-surface-mapper.git
+git clone https://github.com/cookiesn1ffer/attack-surface-mapper.git
 cd attack-surface-mapper
 
 python -m venv .venv
